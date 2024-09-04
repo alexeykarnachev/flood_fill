@@ -4,7 +4,15 @@
     import ColorPicker from "$lib/components/ColorPicker.svelte";
     import { get } from "svelte/store";
 
-    const colors: Color[] = ["red", "green", "blue"];
+    const colors: Color[] = [
+        "red",
+        "green",
+        "blue",
+        "yellow",
+        "magenta",
+        "cian",
+        "pink"
+    ];
     let selected_color: Color | null = null;
     let is_game_over = false;
 
@@ -68,8 +76,8 @@
     }
 
     async function handle_auto_run() {
-        // TODO: This has a bug: sometimes it stucks at the first cell, probably some
-        // corner case fail
+        // TODO: This has a bug: sometimes it stucks when there is no required adjecent color.
+        // solution: check that the most frequent color can be reached from our field.
 
         let current_board = get(BOARD);
         let steps = 0;
@@ -118,4 +126,3 @@
         </button>
     </div>
 </div>
-

@@ -9,7 +9,7 @@ declare global {
         // interface Platform {}
     }
 
-    type Color = "red" | "green" | "blue";
+    type Color = "red" | "green" | "blue" | "yellow" | "magenta" | "cian" | "pink";
 }
 
 export { };

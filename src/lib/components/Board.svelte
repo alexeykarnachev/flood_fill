@@ -5,7 +5,15 @@
     export let cell_size: number = 50;
 
     function get_random_color(): Color {
-        const colors: Color[] = ["red", "green", "blue"];
+        const colors: Color[] = [
+            "red",
+            "green",
+            "blue",
+            "yellow",
+            "magenta",
+            "cian",
+            "pink"
+        ];
         return colors[Math.floor(Math.random() * colors.length)];
     }
 
